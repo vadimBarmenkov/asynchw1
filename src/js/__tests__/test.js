@@ -1,4 +1,4 @@
-import GameSavingLoader from "../src/js/GameSavingLoader";
+import GameSavingLoader from "../GameSavingLoader";
 
 test('test 1', () => {
     const gameSavingLoader = new GameSavingLoader();

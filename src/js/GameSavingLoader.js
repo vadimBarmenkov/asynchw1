@@ -1,5 +1,6 @@
 import read from "./reader";
 import json from "./parser";
+import GameSaving from "./GameSaving";
 
 export default class GameSavingLoader {
      load(){
@@ -8,7 +9,7 @@ export default class GameSavingLoader {
                 return json(response);
             }).then(response => {
                 let saving = JSON.parse(response);
-                resolve(saving);
+                resolve(new GameSaving(saving.id, saving.created, saving.userInfo));
             })
         })
      };
